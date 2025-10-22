@@ -20,11 +20,13 @@ const HomePage = () => {
         "film",
         "craft",
         "art",
+        "lifestyle",
+        "healthy living",
         "tech",
         "general",
         "travel",
         "science",
-        ""
+        "fashion"
     ];
 
     const fetchLatestBlogs = ({ page = 1 }) => {
@@ -83,7 +85,7 @@ const HomePage = () => {
 
         setBlog(null);
 
-        if(pageState == category){
+        if(pageState === category){
             setPageState("home");
             return;
         }
@@ -96,7 +98,7 @@ const HomePage = () => {
 
         activeTabRef.current.click();
 
-        if(pageState == "home"){
+        if(pageState === "home"){
             fetchLatestBlogs({ page: 1 });
         } else {
             fetchBlogsByCategory({ page: 1 })
@@ -142,7 +144,7 @@ const HomePage = () => {
                                     })
                                 : <NoDataMessage message="No blogs published" />
                             )}
-                            <LoadMoreDataBtn state={blogs} fetchDataFun={( pageState == "home" ? fetchLatestBlogs : fetchBlogsByCategory )} />
+                            <LoadMoreDataBtn state={blogs} fetchDataFun={( pageState === "home" ? fetchLatestBlogs : fetchBlogsByCategory )} />
                         </>
 
                         {trendingBlogs == null ? (
@@ -181,13 +183,15 @@ const HomePage = () => {
                             <div className="flex gap-3 flex-wrap">
                                 {categories.map((category, i) => {
                                     return (
-                                        <button onClick={loadBlogByCategory} className={"tag " + (pageState == category ? " bg-amber-500 text-white " : " ")} 
+                                        <button onClick={loadBlogByCategory} className={"tag border-gray-900 shadow-md" + (pageState === category ? " bg-amber-500 text-white " : "")} 
                                         key={i}>
                                             {category}
                                         </button>
                                     );
                                 })}
                             </div>
+
+                            <hr className="border-slate-800 my-7"/>
                         </div>
 
                         <div>

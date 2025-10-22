@@ -92,7 +92,7 @@ const Navbar = () => {
                         <i className="fi fi-rr-search text-xl"></i>
                     </button>
 
-                    <Link to="/editor" className="hidden md:flex gap-2 link hover:bg-yellow-100">
+                    <Link to="/editor" className="hidden md:flex gap-2 link hover:bg-amber-400/50">
                         <i className="fi fi-rr-file-edit"></i>
                         <p>Write</p>
                     </Link>
