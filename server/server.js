@@ -666,6 +666,11 @@ server.post("/like-blog", verifyJWT, (req, res) => {
 
 })
 
+server.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
+
 server.post("/isliked-by-user", verifyJWT, (req, res) => {
     
     let user_id = req.user;
