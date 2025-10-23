@@ -18,7 +18,12 @@ const MinimalBlogPost = ({ blog, index }) => {
                 </div>
 
                 <h1 className="blog-title">{title}</h1>
+
+                  <hr className="border-slate-800 mt-5 mb-1"/>
             </div>
+
+          
+
         </Link>
     )
 }
