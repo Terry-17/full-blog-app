@@ -205,15 +205,15 @@ const EditProfile = () => {
                         <div className="max-lg:center mb-5">
                             <label htmlFor="uploadImg" id="profileImgLable"
                             className="relative block w-48 h-48 bg-grey rounded-full overflow-hidden">
-                                <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center text-white bg-black/30 opacity-0 hover:opacity-100 cursor-pointer">
+                                {/* <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center text-white bg-black/30 opacity-0 hover:opacity-100 cursor-pointer">
                                     Upload Image
-                                </div>
+                                </div> */}
                                 <img ref={profileImgEle} src={profile_img} />
                             </label>
 
                             <input type="file" id="uploadImg" accept=".jpeg, .png, .jpg" hidden onChange={handleImagePreview} />
 
-                            <button className="btn-light mt-5 max-lg:center lg:w-full px-10" onClick={handleImageUpload}>Upload</button>
+                            {/* <button className="btn-light mt-5 max-lg:center lg:w-full px-10" onClick={handleImageUpload}>Upload</button> */}
                         </div>
 
                         <div className="w-full">
@@ -229,7 +229,7 @@ const EditProfile = () => {
 
                             <InputBox type="text" name="username" value={profile_username} placeholder="Username" icon="fi-rr-at" />
 
-                            <p className="text-slate-800 -mt-3">Username will use to search user and will be visible to all users</p>
+                            {/* <p className="text-slate-800 -mt-3">Username will use to search user and will be visible to all users</p> */}
 
                             <textarea name="bio" maxLength={bioLimit} defaultValue={bio} className="input-box h-64 lg:h-40 resize-none leading-7 mt-5 pl-5" placeholder="Bio" onChange={handleCharacterChange}></textarea>
 

@@ -177,7 +177,7 @@ const HomePage = () => {
                     <div className="flex flex-col gap-10">
                         <div>
                             <h1 className="font-medium text-xl mb-8">
-                                Stories form all interests
+                                <span className="border-double border-black border-y-0 border-t-0 border-b-4">Topics :</span>
                             </h1>
 
                             <div className="flex gap-3 flex-wrap">

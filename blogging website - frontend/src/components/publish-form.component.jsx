@@ -154,7 +154,7 @@ const PublishForm = () => {
 
                     <p className="mt-1 text-slate-800 text-sm text-right">{ characterLimit - des.length } characters left</p>
                     
-                    <p className="text-slate-800 mb-2 mt-9">Topics - ( Helps is searching and ranking your blog post )</p>
+                    <p className="text-slate-800 mb-2 mt-9">Topics</p>
 
                     <div className="relative input-box pl-2 py-2 pb-4">
                         <input type="text" placeholder="Topic" className="sticky input-box bg-white top-0 left-0  pl-4 mb-3 focus:bg-white "
